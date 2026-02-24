@@ -1,10 +1,8 @@
 
 let attempts = 0;
 let isAuthenticated = false;
-
 const ADMIN_USER = "admin";
 const ADMIN_PASS = "12345";
-
 while (attempts < 3) {
     let user = prompt("Tên đăng nhập:");
     let pass = prompt("Mật khẩu:");
@@ -78,8 +76,8 @@ if (!isAuthenticated) {
                     alert("Không tìm thấy sách!");
                 }
                 break;
-
-
+  
+                 
             case 4:
                 let oldName = prompt("Nhập tên sách cần sửa:");
                 let pos = libraries.indexOf(oldName);
@@ -91,14 +89,14 @@ if (!isAuthenticated) {
                     alert("Sách không tồn tại!");
                 }
                 break;
-
-
+   
+                    
             case 5:
                 libraries.reverse();
                 alert("Đã đảo ngược thứ tự sách!");
                 break;
 
-
+                 
             case 6:
                 let otherLibrary = ["Kỹ năng sống", "Truyện tranh"];
                 libraries = libraries.concat(otherLibrary);
@@ -113,6 +111,5 @@ if (!isAuthenticated) {
             default:
                 alert("Lựa chọn không hợp lệ!");
         }
-
-    } while (choice !== 7);
-}
+ 
+    
