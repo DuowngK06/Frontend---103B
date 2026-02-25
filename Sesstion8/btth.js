@@ -19,7 +19,7 @@ function showMenu() {
 
 function viewPlayers() {
     squad.forEach(function (player) {
-        console.log(player[0] + " (" + player[2] + "): " + player[1] + " bàn thắng");
+        console.log(player[0] + " (" + player[2] + "): " + player[1] + " Bàn Thắng");
     });
 }
 
@@ -105,4 +105,4 @@ do {
             console.log("Lựa chọn không hợp lệ!");
     }
 
-} while (choice !== "0");
+} while (choice !== "0"); 
