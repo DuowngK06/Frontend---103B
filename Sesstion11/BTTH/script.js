@@ -7,7 +7,8 @@ let products = [
 ]
 
 
-const productP03 = products .find(products => products.id === "P03");
+const productP03 = products.find(products => products.id === "P03");
 console.log(productP03);
+
 
 
