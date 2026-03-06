@@ -15,3 +15,6 @@ products.forEach(product => {
     div.innerHTML = `<p>${product.name}</p><p>${product.price}</p>`;
     productList.appendChild(div);
 });
+
+
+
