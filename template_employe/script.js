@@ -35,21 +35,42 @@ renderData();
 
 
 const addlistproDuck = () => {
-    let data = JSON.parse(localStorage.getItem('key'));
+    let name = document.getElementById("iName").value.trim();
+    let price = document.getElementById("iPrice").value.trim();
+    let inventory = document.getElementById("iStock").value.trim();
 
-    let name = document.getElementById("name").value;
-    let price = document.getElementById("price").value;
-    let inventory = document.getElementById("inventory").value;
-    let submit = document.getElementById("btnSubmit").value;
+
+    if (!name || !price || !inventory) {
+        alert("Vui lòng điền đầy đủ thông tin.");
+        return;
+    }
+    if (isNaN(price) || price <= 0) {
+        alert("Giá phải là số dương.");
+        return;
+    }
+    if (isNaN(inventory) || inventory < 0) {
+        alert("Số lượng phải là số không âm.");
+        return;
+    }
+
+    let data = JSON.parse(localStorage.getItem('key')) || [];
+
 
     let newlistproDuck = {
         id: data.length + 1,
         name: name,
-        price: price,
-        inventory: inventory,
+        price: Number(price),
+        inventory: Number(inventory),
     };
 
     data.push(newlistproDuck);
     localStorage.setItem("key", JSON.stringify(data));
     renderData();
+
+
+    document.getElementById("iName").value = "";
+    document.getElementById("iPrice").value = "";
+    document.getElementById("iStock").value = "";
 };
+
+document.getElementsByClassName("btn-primary")[0].onclick = submitForm = addlistproDuck;
