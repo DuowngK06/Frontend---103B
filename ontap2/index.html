@@ -1,0 +1,60 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!--  <br class="container"> -->
+    <h2>Thêm Ca Sĩ Mới</h2>
+
+    <label>Tên ca sĩ</label>
+    <input type="text" id="name">
+    <br></br>
+    <label>Ngày sinh (YYYY-MM-DD)</label>
+    <input type="date" id="birthDate">
+    <br></br>
+    <label>Quốc tịch</label>
+    <select id="nationality">
+        <option value="">-- Chọn quốc tịch --</option>
+        <option value="Việt Nam">Việt Nam</option>
+        <option value="Hàn Quốc">Hàn Quốc</option>
+        <option value="Mỹ">Mỹ</option>
+    </select>
+    <br></br>
+    <label>Số lượt theo dõi (Follower)</label>
+    <input type="text" id="followers">
+    <br></br>
+    <label>Thể loại âm nhạc chính</label>
+    <select id="genre">
+        <option value="">-- Chọn thể loại --</option>
+        <option value="V-Pop">V-Pop</option>
+        <option value="K-Pop">K-Pop</option>
+        <option value="Pop">Pop</option>
+    </select>
+    <br></br>
+    <button id="btnAdd">Thêm ca sĩ</button>
+    </div>
+    <h1>Quan Ly Ca Si Noi Tieng</h1>
+    <table border="1" cellpading="10">
+        <thead>
+            <tr>
+                <th>STT</th>
+                <th>Ten ca si</th>
+                <th>Ngaysinh </th>
+                <th>Quoc tich</th>
+                <th>Fllower</th>
+                <th>The loai</th>
+                <th>Han dong</th>
+            </tr>
+        </thead>
+        <tbody id="TablaData"></tbody>
+    </table>
+
+    </form>
+    <script src="script.js"></script>
+</body>
+
+</html>
