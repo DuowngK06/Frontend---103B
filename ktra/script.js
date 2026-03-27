@@ -42,28 +42,25 @@ const renderStuden = () => {
 renderStuden();
 
 const addStudent = () => {
-
     let maSV = document.getElementById("studentId").value;
     let name = document.getElementById("studentName").value;
     let email = document.getElementById("studentEmail").value;
     let score = document.getElementById("studentScore").value;
-    let submit = document.getElementById("btnAdd").value;
 
     let data = JSON.parse(localStorage.getItem("key")) || [];
+
     let newStudent = {
         id: data.length + 1,
         maSV: maSV,
         name: name,
         Email: email,
-        Score: score,
-        Result: score >= 5 ? "Pass" : "Fail"
+        Score: Number(score),
+        Result: Number(score) >= 5 ? "Pass" : "Fail"
     };
 
-
     data.push(newStudent);
-
     localStorage.setItem("key", JSON.stringify(data));
     renderStuden();
 };
 
-
+document.getElementById("btnAdd").onclick = addStudent;
